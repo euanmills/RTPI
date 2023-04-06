@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "Local Plan ": "Somethinbg",
-        "date": "today"
+        "date": "Tomorrow"
       },
       "geometry": {
         "coordinates": [
