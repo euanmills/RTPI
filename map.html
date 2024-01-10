@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6); background-color: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #14986a; -webkit-text-stroke: #14986a; background-color: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #000000; min-height: 19.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #ffffff; color: rgba(255, 255, 255, 0.5); -webkit-text-stroke: rgba(255, 255, 255, 0.5); background-color: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #2781c9; -webkit-text-stroke: 0px #2781c9}
+    span.s3 {font-kerning: none; color: #ffffff; -webkit-text-stroke: 0px #ffffff}
+    span.s4 {font-kerning: none; color: #d41466; -webkit-text-stroke: 0px #d41466}
+    span.s5 {font-kerning: none; color: #eb102f; -webkit-text-stroke: 0px #eb102f}
+    span.s6 {font-kerning: none; color: #14986a; -webkit-text-stroke: 0px #14986a}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;html&gt;</span></p>
+<p class="p2"><span class="s1">&lt;head&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Interactive GeoJSON Map&lt;/title&gt;</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span>&lt;link </span><span class="s4">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3"> </span><span class="s4">href</span><span class="s3">=</span><span class="s1">"https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"</span><span class="s3"> /&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">#map</span><span class="s1"> { </span><span class="s6">height</span><span class="s1">: </span><span class="s4">400px</span><span class="s1">; }</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1">&lt;body&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">&lt;div </span><span class="s4">id</span><span class="s1">=</span><span class="s6">"map"</span><span class="s1">&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s3">&lt;script </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"</span><span class="s3">&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1">&lt;script&gt;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">// Initialize the map centered on London</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">var</span><span class="s1"> map = L.</span><span class="s5">map</span><span class="s1">(</span><span class="s6">'map'</span><span class="s1">).</span><span class="s5">setView</span><span class="s1">([</span><span class="s4">51.5074</span><span class="s1">, -</span><span class="s4">0.1278</span><span class="s1">], </span><span class="s4">13</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">// Load a tile layer</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span>L.</span><span class="s5">tileLayer</span><span class="s3">(</span><span class="s1">'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'</span><span class="s3">, {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">maxZoom</span><span class="s1">: </span><span class="s4">19</span><span class="s1">,</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s4">attribution</span><span class="s3">: </span><span class="s1">'© OpenStreetMap contributors'</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>}).</span><span class="s5">addTo</span><span class="s1">(map);</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">// Load GeoJSON from an external URL</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s5">fetch</span><span class="s3">(</span><span class="s1">'path_to_your_geojson_file.geojson'</span><span class="s3">)</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.</span><span class="s5">then</span><span class="s1">(</span><span class="s2">function</span><span class="s1">(response) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">return</span><span class="s1"> response.</span><span class="s5">json</span><span class="s1">();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>})</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>.</span><span class="s5">then</span><span class="s1">(</span><span class="s2">function</span><span class="s1">(data) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>L.</span><span class="s5">geoJson</span><span class="s1">(data, {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s4">onEachFeature</span><span class="s1">: </span><span class="s2">function</span><span class="s1"> (feature, layer) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">// Assuming 'name' is a property in your GeoJSON features</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>layer.</span><span class="s5">bindPopup</span><span class="s1">(feature.properties.name || </span><span class="s6">'No metadata'</span><span class="s1">);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s5">addTo</span><span class="s1">(map);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
