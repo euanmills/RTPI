@@ -5,11 +5,7 @@
             "type": "Feature",
             "properties": {
                 "name": "Local Plan",
-                "population": 10000,
-                "areaId": "LP-001",
-                "additionalInfo": {
-                    "historicalSignificance": "Historical town center",
-                    "dateEstablished": "1800-01-01"
+               
                 }
             },
             "geometry": {
