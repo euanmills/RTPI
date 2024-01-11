@@ -4,9 +4,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Local Plan",
-               
-                }
+                "name": "Local Plan" }
             },
             "geometry": {
                 "coordinates": [
