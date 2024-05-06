@@ -8,11 +8,11 @@
     "type": "Polygon",
     "coordinates": [
       [
-        [-0.1592, 51.5313],  // Bottom left corner (longitude, latitude)
-        [-0.1592, 51.5513],  // Top left corner
-        [-0.1192, 51.5513],  // Top right corner
-        [-0.1192, 51.5313],  // Bottom right corner
-        [-0.1592, 51.5313]   // Closing the polygon
+        [-0.148, 51.499],  // Bottom left corner (longitude, latitude)
+        [-0.148, 51.522],  // Top left corner
+        [-0.117, 51.522],  // Top right corner
+        [-0.117, 51.499],  // Bottom right corner
+        [-0.148, 51.499]   // Closing the polygon
       ]
     ]
   }
